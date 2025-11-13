@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Page Not Found',
-  description: 'Page not found',
+  title: '页面未找到',
+  description: '抱歉，您访问的页面不存在',
 };
 
 export default function NotFound() {
@@ -15,10 +15,10 @@ export default function NotFound() {
         <article className="post" id="contact">
           <header>
             <div className="title">
-              <h2>Page Not Found</h2>
+              <h2>页面未找到</h2>
             </div>
           </header>
-          <Link href="/">Return Home</Link>
+          <Link href="/">返回首页</Link>
         </article>
       </div>
     </div>
