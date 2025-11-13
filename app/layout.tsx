@@ -23,35 +23,35 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: {
-    default: "Michael D'Angelo",
-    template: "%s | Michael D'Angelo",
+    default: "林蓉徽的职业探索作品集",
+    template: "%s | 林蓉徽的作品集",
   },
   description:
-    "Michael D'Angelo's personal website. Data scientist, machine learning engineer, and full-stack developer.",
+    "林蓉徽的职业探索作品集，聚焦内容创作、创意设计与社会洞察，展示多元实践与作品，探索内容、产品、创意营销、用户研究、公关传媒等相关方向。",
   keywords: [
-    "Michael D'Angelo",
-    'data scientist',
-    'machine learning',
-    'full-stack developer',
-    'engineer',
-    'portfolio',
+    "林蓉徽",
+    '内容创作与文案撰写',
+    'AI+创意设计',
+    '社会洞察与用户研究',
+    '公关传媒',
+    '作品集',
   ],
-  authors: [{ name: "Michael D'Angelo" }],
-  creator: "Michael D'Angelo",
-  metadataBase: new URL('https://mldangelo.com'),
+  authors: [{ name: "林蓉徽" }],
+  creator: "林蓉徽",
+  metadataBase: new URL('https://FlorineLin.github.io/LingRonghui-personal-website'),
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    url: 'https://mldangelo.com',
-    siteName: "Michael D'Angelo",
-    title: "Michael D'Angelo",
-    description: 'Data scientist, machine learning engineer, and full-stack developer.',
+    locale: 'zh_CN',
+    url: 'https://FlorineLin.github.io/LingRonghui-personal-website',
+    siteName: "林蓉徽的职业探索作品集",
+    title: "林蓉徽的职业探索作品集",
+    description: '聚焦内容创作与AI+创意生产、社会洞察、用户与产品研究的作品集',
     images: [
       {
         url: '/images/me.jpg',
         width: 1200,
         height: 630,
-        alt: "Michael D'Angelo",
+        alt: "林蓉徽",
       },
     ],
   },
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sourceSans.variable} ${raleway.variable}`}>
+    <html lang="zh_CN" className={`${sourceSans.variable} ${raleway.variable}`}>
       <body>
         <div id="wrapper">
           <Navigation />
