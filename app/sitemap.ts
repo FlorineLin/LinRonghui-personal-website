@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://mldangelo.com';
+  const baseUrl = 'https://FlorineLin.gituhub.io/LinRonghui-personal-website';
   const currentDate = new Date();
 
   return [
@@ -30,12 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/stats`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.5,
     },
     {
       url: `${baseUrl}/contact`,
