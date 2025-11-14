@@ -1,3 +1,4 @@
+// 保留源文件的接口定义（必须原样保留，否则类型报错）
 export interface Skill {
   title: string;
   competency: number;
@@ -9,255 +10,83 @@ export interface Category {
   color: string;
 }
 
+// 你的技能数据（严格适配Skill接口）
 const skills: Skill[] = [
   {
-    title: 'Javascript',
-    competency: 4,
-    category: ['Web Development', 'Languages', 'Javascript'],
+    title: "文案撰写", // 原name→title
+    competency: 5, // 原level→competency
+    category: ["内容创作", "文案"], // 数字→字符串数组（可多分类）
   },
   {
-    title: 'Node.JS',
+    title: "内容策划",
+    competency: 4,
+    category: ["内容创作", "策划"],
+  },
+  {
+    title: "视觉设计（基础）",
+    competency: 3,
+    category: ["创意设计", "工具使用"],
+  },
+  {
+    title: "IP形象设计",
+    competency: 3,
+    category: ["创意设计", "品牌"],
+  },
+  {
+    title: "活动创意",
+    competency: 4,
+    category: ["内容创作", "活动策划"],
+  },
+  {
+    title: "用户需求分析",
+    competency: 4,
+    category: ["用户洞察", "分析"],
+  },
+  {
+    title: "基础数据分析",
+    competency: 3,
+    category: ["用户洞察", "数据工具"],
+  },
+  {
+    title: "办公软件（Word/Excel/PPT）",
     competency: 5,
-    category: ['Web Development', 'Javascript'],
+    category: ["工具掌握", "办公"],
   },
   {
-    title: 'React',
-    competency: 2,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'Next.JS',
-    competency: 3,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'Bash',
-    competency: 2,
-    category: ['Tools', 'Languages'],
-  },
-  {
-    title: 'Amazon Web Services',
+    title: "新媒体工具（公众号/秀米/剪映）",
     competency: 4,
-    category: ['Web Development', 'Tools'],
+    category: ["工具掌握", "新媒体"],
   },
   {
-    title: 'Heroku',
-    competency: 2,
-    category: ['Web Development', 'Tools'],
-  },
-  {
-    title: 'MongoDB',
-    competency: 3,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'ElasticSearch',
-    competency: 2,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'PostgreSQL/SQLite3/SQL/Redshift',
+    title: "PS/Canva",
     competency: 4,
-    category: ['Web Development', 'Databases', 'Languages'],
+    category: ["工具掌握", "设计"],
   },
   {
-    title: 'Redis',
+    title: "AI设计与互动网页搭建",
     competency: 3,
-    category: ['Web Development', 'Databases'],
+    category: ["工具掌握", "创意设计"],
   },
-  {
-    title: 'Data Mining',
-    competency: 3,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Express.JS',
-    competency: 2,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'D3',
-    competency: 2,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'Flask',
-    competency: 3,
-    category: ['Web Development', 'Python'],
-  },
-  {
-    title: 'FastAPI',
-    competency: 3,
-    category: ['Web Development', 'Python'],
-  },
-  {
-    title: 'Git/Mercurial',
-    competency: 3,
-    category: ['Tools'],
-  },
-  {
-    title: 'Kubernetes',
-    competency: 2,
-    category: ['Tools', 'Data Engineering'],
-  },
-  {
-    title: 'Google Cloud Compute',
-    competency: 2,
-    category: ['Tools', 'Web Development'],
-  },
-  {
-    title: 'AWS',
-    competency: 3,
-    category: ['Tools', 'Web Development'],
-  },
-  {
-    title: 'Docker',
-    competency: 3,
-    category: ['Tools', 'Data Engineering'],
-  },
-  {
-    title: 'AWS Lambda',
-    competency: 3,
-    category: ['Tools', 'Web Development'],
-  },
-  {
-    title: 'Numpy',
-    competency: 3,
-    category: ['Data Science', 'Data Engineering', 'Python', 'ML Engineering'],
-  },
-  {
-    title: 'Numba',
-    competency: 2,
-    category: ['Data Science', 'Data Engineering', 'Python'],
-  },
-  {
-    title: 'Tensorflow + Keras',
-    competency: 3,
-    category: ['ML Engineering', 'Python'],
-  },
-  {
-    title: 'PyTorch',
-    competency: 3,
-    category: ['ML Engineering', 'Python'],
-  },
-  {
-    title: 'Jupyter',
-    competency: 3,
-    category: ['Data Science', 'Python'],
-  },
-  {
-    title: 'Typescript',
-    competency: 3,
-    category: ['Web Development', 'Languages', 'Javascript'],
-  },
-  {
-    title: 'HTML + SASS/SCSS/CSS',
-    competency: 3,
-    category: ['Web Development', 'Languages'],
-  },
-  {
-    title: 'Python',
-    competency: 5,
-    category: ['Languages', 'Python', 'ML Engineering'],
-  },
-  {
-    title: 'Ruby',
-    competency: 2,
-    category: ['Languages'],
-  },
-  {
-    title: 'Ruby on Rails',
-    competency: 3,
-    category: ['Web Development', 'Languages'],
-  },
-  {
-    title: 'C++',
-    competency: 1,
-    category: ['Languages'],
-  },
-  {
-    title: 'Julia',
-    competency: 2,
-    category: ['Languages'],
-  },
-  {
-    title: 'MATLAB',
-    competency: 2,
-    category: ['Languages'],
-  },
-  {
-    title: 'R',
-    competency: 2,
-    category: ['Languages'],
-  },
-  {
-    title: 'Data Visualization',
-    competency: 3,
-    category: ['Data Science', 'Javascript'],
-  },
-  {
-    title: 'GraphQL',
-    competency: 2,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'Pandas',
-    competency: 5,
-    category: ['Data Engineering', 'ML Engineering', 'Python'],
-  },
-  {
-    title: 'Matplotlib',
-    competency: 3,
-    category: ['Data Engineering', 'ML Engineering', 'Python'],
-  },
-  {
-    title: 'Scikit-Learn',
-    competency: 4,
-    category: ['Data Engineering', 'ML Engineering', 'Python'],
-  },
-  {
-    title: 'Spark',
-    competency: 2,
-    category: ['Data Engineering', 'ML Engineering'],
-  },
-  {
-    title: 'Dagster',
-    competency: 2,
-    category: ['Data Engineering', 'Python', 'ML Engineering'],
-  },
-  {
-    title: 'Mypy',
-    competency: 3,
-    category: ['Python'],
-  },
-  {
-    title: 'Pylint',
-    competency: 4,
-    category: ['Data Engineering', 'Python'],
-  },
-].map((skill) => ({ ...skill, category: skill.category.sort() }));
-
-// this is a list of colors that I like. The length should be === to the
-// number of categories. Re-arrange this list until you find a pattern you like.
-const colors: string[] = [
-  '#6968b3',
-  '#37b1f5',
-  '#40494e',
-  '#515dd4',
-  '#e47272',
-  '#cc7b94',
-  '#3896e2',
-  '#c3423f',
-  '#d75858',
-  '#747fff',
-  '#64cb7b',
 ];
 
+// 保留源文件的颜色数组（可按需调整颜色，数量≥分类数即可）
+const colors: string[] = [
+  '#6968b3', // 紫色（内容创作）
+  '#37b1f5', // 蓝色（创意设计）
+  '#40494e', // 深灰（用户洞察）
+  '#515dd4', // 靛蓝（工具掌握）
+  '#e47272', // 红色（策划）
+  '#cc7b94', // 粉紫（文案）
+  '#3896e2', // 浅蓝（分析）
+  '#64cb7b', // 绿色（办公/新媒体）
+];
+
+// 保留源文件“自动提取分类+分配颜色”的逻辑（无需手动写categories）
 const categories: Category[] = Array.from(new Set(skills.flatMap(({ category }) => category)))
   .sort()
   .map((category, index) => ({
     name: category,
-    color: colors[index],
+    color: colors[index], // 按分类顺序分配颜色
   }));
 
 export { categories, skills };
